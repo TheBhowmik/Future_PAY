@@ -1,11 +1,11 @@
 package com.example.UPI.service;
 
-import com.demo.upimesh.crypto.HybridCryptoService;
-import com.demo.upimesh.crypto.ServerKeyHolder;
-import com.demo.upimesh.model.Account;
-import com.demo.upimesh.model.AccountRepository;
-import com.demo.upimesh.model.MeshPacket;
-import com.demo.upimesh.model.PaymentInstruction;
+import com.example.UPI.crypto.HybridCryptoService;
+import com.example.UPI.crypto.ServerKeyHolder;
+import com.example.UPI.model.Account;
+import com.example.UPI.model.AccountRepository;
+import com.example.UPI.model.MeshPacket;
+import com.example.UPI.model.PaymentInstruction;
 import jakarta.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

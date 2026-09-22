@@ -1,7 +1,7 @@
 package com.example.UPI.crypto;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.demo.upimesh.model.PaymentInstruction;
+import com.example.UPI.model.PaymentInstruction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

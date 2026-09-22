@@ -1,6 +1,6 @@
 package com.example.UPI.service;
 
-import com.demo.upimesh.model.MeshPacket;
+import com.example.UPI.model.MeshPacket;
 
 import java.util.Collection;
 import java.util.Map;

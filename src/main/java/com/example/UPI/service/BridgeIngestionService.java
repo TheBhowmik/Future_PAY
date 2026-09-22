@@ -1,9 +1,9 @@
 package com.example.UPI.service;
 
-import com.demo.upimesh.crypto.HybridCryptoService;
-import com.demo.upimesh.model.MeshPacket;
-import com.demo.upimesh.model.PaymentInstruction;
-import com.demo.upimesh.model.Transaction;
+import com.example.UPI.crypto.HybridCryptoService;
+import com.example.UPI.model.MeshPacket;
+import com.example.UPI.model.PaymentInstruction;
+import com.example.UPI.model.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

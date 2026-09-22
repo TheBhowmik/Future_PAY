@@ -1,6 +1,6 @@
 package com.example.UPI.service;
 
-import com.demo.upimesh.model.MeshPacket;
+import com.example.UPI.model.MeshPacket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
