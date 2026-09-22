@@ -1,4 +1,4 @@
-package controller;
+package com.example.UPI.controller;
 
 import com.example.UPI.crypto.ServerKeyHolder;
 import com.example.UPI.model.*;
