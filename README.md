@@ -131,24 +131,4 @@ When running in production mode:
 - **Health:** http://localhost:8081/actuator/health
 - **Metrics:** http://localhost:8081/actuator/prometheus
 
-## Security Notes
 
-This project implements cryptographic payload protection and distributed idempotency. However, it remains a demonstration.
-
-Before considering real-world deployment, the system requires:
-
-- Hardware-backed key storage (HSM/KMS).
-- Strong mobile client authentication (JWT/OAuth2).
-- Device certificate validation and secure key provisioning.
-- Replay protection and robust transaction authorization.
-- Comprehensive security audits and regulatory compliance controls.
-
-**Important:** Redis-based deduplication alone does not guarantee exactly-once financial settlement. Production systems should enforce durable idempotency using database constraints and atomic transaction processing.
-
-## Future Improvements
-
-- Real mobile BLE (Bluetooth Low Energy) mesh networking clients.
-- Secure hardware-backed key storage (AWS KMS / HashiCorp Vault).
-- Digital signatures for non-repudiation of payment packets.
-- Improved packet routing heuristics.
-- End-to-end integration test suites.
