@@ -10,7 +10,7 @@ spring:
   jpa:
     hibernate:
       # Validates schema matches entities, but relies on Flyway for actual changes
-      ddl-auto: validate
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
