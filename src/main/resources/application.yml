@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: future-pay
+  profiles:
+    active: dev # Defaults to 'dev' unless specified otherwise
+
+server:
+  port: 8081
+
+logging:
+  level:
+    com.example.UPI: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+
+upi:
+  mesh:
+    # 24 hours in seconds
+    idempotency-ttl-seconds: 86400
+    # Packet freshness window
+    packet-max-age-seconds: 86400
