@@ -1,19 +1,20 @@
 package com.example.UPI.model;
 
 import jakarta.persistence.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.math.BigDecimal;
+import java.time.Instant;
 
-/**
- * Simulated bank account. In a real system this would live in the bank's core,
- * not in our service. For the demo, we own the ledger.
- */
 @Entity
 @Table(name = "accounts")
+@EntityListeners(AuditingEntityListener.class)
 public class Account {
 
     @Id
-    private String vpa; // Virtual Payment Address, e.g. "alice@demo"
+    private String vpa;
 
     @Column(nullable = false)
     private String holderName;
@@ -21,8 +22,16 @@ public class Account {
     @Column(nullable = false, precision = 19, scale = 2)
     private BigDecimal balance;
 
-    @Version  // Optimistic locking — prevents lost updates on concurrent transfers
+    @Version
     private Long version;
+
+    @CreatedDate
+    @Column(updatable = false, nullable = false)
+    private Instant createdAt;
+
+    @LastModifiedDate
+    @Column(nullable = false)
+    private Instant updatedAt;
 
     public Account() {}
 
@@ -43,4 +52,7 @@ public class Account {
 
     public Long getVersion() { return version; }
     public void setVersion(Long version) { this.version = version; }
+
+    public Instant getCreatedAt() { return createdAt; }
+    public Instant getUpdatedAt() { return updatedAt; }
 }
